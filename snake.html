@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🐍 Snake Game</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Length:</span>
+                    <span id="length">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">High Score:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+            <!-- Login Button -->
+            <button id="loginBtn" class="login-btn">👤 Login</button>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            
+            <div id="gameOver" class="game-over hidden">
+                <h2>Game Over! 🐍</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Snake Length: <span id="finalLength">1</span></p>
+                <button id="restartBtn" class="restart-btn">Play Again</button>
+            </div>
+            
+            <div id="startScreen" class="start-screen">
+                <h2>🐍 Ready to Slither?</h2>
+                <p>Use arrow keys or WASD to control the snake</p>
+                <p>Eat apples to grow longer and earn points!</p>
+                <p>Don't hit the walls or yourself!</p>
+                <button id="startBtn" class="start-btn">Start Game</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h3>Controls:</h3>
+                <div class="control-keys">
+                    <div class="key">↑</div>
+                    <div class="key">↓</div>
+                    <div class="key">←</div>
+                    <div class="key">→</div>
+                </div>
+                <p>or</p>
+                <div class="control-keys">
+                    <div class="key">W</div>
+                    <div class="key">S</div>
+                    <div class="key">A</div>
+                    <div class="key">D</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="snake.js"></script>
+</body>
+</html> 
